@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Sidebar_Menu</title>
+</head>
+
+<style>
+#sidebar{
+    transition: all 0.3s;
+}
+.toggle.open{
+    transform: translateX(160px);
+}
+#sidebar.open span{
+    opacity: 1;
+}
+#sidebar li{
+    transition: 0.3s;
+}
+#sidebar i,
+#sidebar span{
+    transition: ease-out 0.2s;
+}
+
+#sidebar ul::-webkit-scrollbar{
+    display: none;
+}
+
+
+</style>
+
+<body class="flex gap-8 bg-[#f0f0f0] dark:bg-[#282c4e] transition-all duration-500 box-border">
+    <section class="h-screen flex items-center justify-start">
+        <div class="relative w-[90px] h-full flex flex-col gap-6 bg-white dark:bg-[#0b0f2f] transition-all duration-500 p-4" id="sidebar">
+            <div class="flex items-center gap-2 mb-6">
+                <img src="../logo.png" alt="" class="w-10 h-10 rounded-md">
+                <div class="text-gray-600 dark:text-[#f3f3f3]">
+                    <span class="text-xl font-bold opacity-0">Alishams</span>
+                    <span class="text-lg opacity-0">WebDeveloper</span>
+                </div>
+            </div>
+            <ul class="h-full flex flex-col justify-between text-gray-600 dark:text-[#f3f3f3] text-lg overflow-x-hidden overflow-auto transition-all duration-200">
+                <li class="flex items-center justify-center gap-1 bg-gray-100 dark:bg-[#282c4e] transition-all duration-500 p-2 rounded-md">
+                    <i class="ri-search-line text-lg font-bold"></i>
+                    <input type="search" class="w-full p-2 outline-none bg-transparent" placeholder="Search...">
+                </li>
+                <li class="flex items-center p-2 font-medium hover:bg-blue hover:text-white rounded-md">
+                    <a href="#" class="flex items-center justify-center gap-4">
+                        <i class="ri-home-5-line"></i>
+                        <span class="opacity-0">Dashboard</span>
+                    </a>
+                </li>
+                <li class="flex items-center p-2 font-medium hover:bg-blue hover:text-white rounded-md">
+                    <a href="#" class="flex items-center justify-center gap-4">
+                        <i class="ri-bar-chart-2-line"></i>
+                        <span class="opacity-0">Revenue</span>
+                    </a>
+                </li>
+                <li class="flex items-center p-2 font-medium hover:bg-blue hover:text-white rounded-md">
+                    <a href="#" class="flex items-center justify-center gap-4">
+                        <i class="ri-notification-2-line"></i>
+                        <span class="opacity-0">Notification</span>
+                    </a>
+                </li>
+                <li class="flex items-center p-2 font-medium hover:bg-blue hover:text-white rounded-md">
+                    <a href="#" class="flex items-center justify-center gap-4">
+                        <i class="ri-pie-chart-line"></i>
+                        <span class="opacity-0">Analytics</span>
+                    </a>
+                </li>
+                <li class="flex items-center p-2 font-medium hover:bg-blue hover:text-white rounded-md">
+                    <a href="#" class="flex items-center justify-center gap-4">
+                        <i class="ri-heart-line"></i>
+                        <span class="opacity-0">Likes</span>
+                    </a>
+                </li>
+                <li class="flex items-center p-2 font-medium hover:bg-blue hover:text-white rounded-md">
+                    <a href="#" class="flex items-center justify-center gap-4">
+                        <i class="ri-wallet-line"></i>
+                        <span class="opacity-0">Wallets</span>
+                    </a>
+                </li>
+                <li class="flex items-center p-2 font-medium hover:bg-blue hover:text-white rounded-md">
+                    <a href="#" class="flex items-center justify-center gap-4">
+                        <i class="ri-logout-box-line"></i>
+                        <span class="opacity-0">Logout</span>
+                    </a>
+                </li>
+                <li class="flex items-center p-2 font-medium hover:bg-blue hover:text-white rounded-md">
+                    <a href="#" class="flex items-center justify-center gap-4">
+                        <i class="ri-moon-line transition-all duration-500" id="mode"></i>
+                        <span class="opacity-0 whitespace-nowrap" id="text-mode">Dark mode</span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+        <i class="ri-arrow-right-s-line toggle absolute left-[75px] top-8 text-lg px-1 rounded-full bg-blue font-bold text-white cursor-pointer transition-all duration-300"></i>
+    </section>
+    
+    <section class="mt-8">
+        <span class="text-3xl font-bold text-gray-600 dark:text-[#f3f3f3] transition-all duration-200">Dashboard Sidebar</span>
+    </section>
+
+    <script src="./js/script.js"></script>
+    <script src="./js/Storage.js"></script>
+</body>
+</html>
